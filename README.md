@@ -1,6 +1,7 @@
 # react-native-pouchdb-md5
 
 PouchDB utilities for calculating MD5 checksums for React Native.
+It avoids calling `readAsArrayBuffer` and uses [react-native-quick-md5](https://github.com/craftzdog/react-native-quick-md5) instead.
 
 ## Installation
 
