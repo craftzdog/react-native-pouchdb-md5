@@ -3,12 +3,22 @@ import * as React from 'react';
 import { StyleSheet, View, Text } from 'react-native';
 import PouchdbMd5 from 'react-native-pouchdb-md5';
 
+async function calcRemoteImage(): Promise<string> {
+  const res = await fetch('https://www.craftz.dog/dog-icon.png');
+  const blob = await res.blob();
+  const md5: string = await new Promise((resolve) => {
+    PouchdbMd5.binaryMd5(blob, resolve);
+  });
+  console.log('md5:', md5);
+  return md5;
+}
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
+  const [result, setResult] = React.useState<string | undefined>();
 
   React.useEffect(() => {
-    PouchdbMd5.multiply(3, 7).then(setResult);
+    setResult('loading..');
+    calcRemoteImage().then(setResult, (e) => setResult(e.message));
   }, []);
 
   return (

@@ -1,21 +1,14 @@
 # react-native-pouchdb-md5
 
-PouchDB utilities for calculating MD5 checksums for React Native
+PouchDB utilities for calculating MD5 checksums for React Native.
 
 ## Installation
 
+Install this module as an alias of `pouchdb-md5`:
+
 ```sh
-npm install react-native-pouchdb-md5
-```
-
-## Usage
-
-```js
-import PouchdbMd5 from "react-native-pouchdb-md5";
-
-// ...
-
-const result = await PouchdbMd5.multiply(3, 7);
+npm install pouchdb-md5@npm:react-native-pouchdb-md5 react-native-quick-md5
+cd ios && pod install
 ```
 
 ## Contributing
