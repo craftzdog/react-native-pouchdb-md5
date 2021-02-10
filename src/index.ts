@@ -8,7 +8,7 @@ export default {
   binaryMd5(data: string | Blob, callback: CallbackFunction) {
     if (typeof data === 'string') {
       const md5 = Md5.calc(data, 'utf8', 'base64');
-      callback(md5);
+      setImmediate(() => callback(md5));
     } else {
       // @ts-ignore
       NativeFileReaderModule.readAsDataURL(data.data).then((url: string) => {
@@ -20,6 +20,6 @@ export default {
   },
   stringMd5(data: string, callback: CallbackFunction) {
     const md5 = Md5.calc(data, 'utf8', 'hex');
-    callback(md5);
+    setImmediate(() => callback(md5));
   },
 };
