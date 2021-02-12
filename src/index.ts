@@ -17,9 +17,8 @@ export function binaryMd5(data: string | Blob, callback: CallbackFunction) {
     });
   }
 }
-export function stringMd5(data: string, callback: CallbackFunction) {
-  const md5 = Md5.calc(data, 'utf8', 'hex');
-  setImmediate(() => callback(md5));
+export function stringMd5(data: string) {
+  return Md5.calc(data, 'utf8', 'hex');
 }
 
 export default {
