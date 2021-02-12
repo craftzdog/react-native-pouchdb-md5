@@ -18,8 +18,7 @@ export default {
       });
     }
   },
-  stringMd5(data: string, callback: CallbackFunction) {
-    const md5 = Md5.calc(data, 'utf8', 'hex');
-    setImmediate(() => callback(md5));
+  stringMd5(data: string) {
+    return Md5.calc(data, 'utf8', 'hex');
   },
 };
