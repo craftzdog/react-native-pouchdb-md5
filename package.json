@@ -1,6 +1,6 @@
 {
   "name": "react-native-pouchdb-md5",
-  "version": "7.2.4",
+  "version": "7.3.0",
   "description": "PouchDB utilities for calculating MD5 checksums for React Native",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
