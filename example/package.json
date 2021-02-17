@@ -9,9 +9,11 @@
     "start": "react-native start"
   },
   "dependencies": {
+    "buffer": "^6.0.3",
+    "js-base64": "^3.6.0",
     "react": "16.13.1",
     "react-native": "0.63.4",
-    "react-native-quick-md5": "^0.1.0"
+    "react-native-quick-md5": "^1.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
